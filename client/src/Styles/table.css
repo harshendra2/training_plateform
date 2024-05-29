@@ -1,0 +1,25 @@
+.table-container {
+    overflow-x: auto;
+    padding-top: 25px;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  th{
+    background-color: rgba(20, 20, 23, 0.27);
+  }
+  
+  th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  @media screen and (max-width: 600px) {
+    th, td {
+      font-size: 12px;
+    }
+  }
+  

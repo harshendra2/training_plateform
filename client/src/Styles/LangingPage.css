@@ -1,0 +1,42 @@
+
+  .landing-page {
+    background: url('https://cdn.wallpapersafari.com/32/24/GLWRuH.jpg') no-repeat center center/cover;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px; /* Adds space between the buttons */
+  }
+  
+  .btn {
+    width: 200px;
+    padding: 15px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .admin-btn {
+    background-color: #4CAF50;
+    color: white;
+  }
+  
+  .user-btn {
+    background-color: #008CBA;
+    color: white;
+  }
+  
+  .btn:hover {
+    opacity: 0.8;
+  }
+  
