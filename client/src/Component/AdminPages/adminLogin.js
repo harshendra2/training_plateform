@@ -23,7 +23,7 @@ function AdminLoginPage() {
       try {
         const response = await AdminLoginfunction({ email, password });
         if (response.status === 200) {
-          localStorage.setItem("admindbtoken", response.adminToken);
+          localStorage.setItem("admindbtoken", response.data.adminToken);
           toast.success("Login Successfully");
           navigate("/admin/homepage");
         } else {

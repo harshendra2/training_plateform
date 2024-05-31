@@ -51,7 +51,8 @@ export const getUserProfile = async (id) => {
 };
 
 
-export const updateUserProfile = async (id,profile,token) => {
+export const updateUserProfile = async (id,profile) => {
+  console.log("update user profile",profile)
   return await commonrequest("PUT", `${BACKEND_URL}/user/profile/edit/${id}`,profile, token);
 };
 

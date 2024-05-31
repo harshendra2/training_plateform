@@ -17,7 +17,6 @@ function Profile() {
   const [id, SetId] = useState("");
 
   const fetchProfile = async (id) => {
-    console.log("user id for profile", id);
     try {
       const response = await getUserProfile(id);
       if (response.status === 200) {
@@ -36,7 +35,7 @@ function Profile() {
       fetchProfile(userObject._id);
       SetId(userObject._id);
     }
-  }, []);
+  },[]);
 
   const handleChange = (e) => {
     const { name, value } = e.target;

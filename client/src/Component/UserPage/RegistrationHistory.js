@@ -49,7 +49,7 @@ function Registrationhistory() {
             <tr>
               <th>Course Name</th>
               <th>Description</th>
-              <th>Start Data</th>
+              <th>Start Date</th>
               <th>End Date</th>
               <th>Reg No:</th>
               <th>Student Name</th>

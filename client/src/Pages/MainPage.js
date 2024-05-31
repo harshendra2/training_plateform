@@ -45,7 +45,7 @@ function MainPage() {
             <tr>
               <th>Course Name</th>
               <th>Description</th>
-              <th>Start Data</th>
+              <th>Start Date</th>
               <th>End Date</th>
               <th>Action</th>
             </tr>
@@ -56,8 +56,12 @@ function MainPage() {
                 <tr key={index}>
                   <td>{temp.title}</td>
                   <td>{temp.description}</td>
-                  <td>{temp.start_date}</td>
-                  <td>{temp.end_date}</td>
+                  <td>{new Date(
+                     temp.start_date
+                    ).toLocaleDateString()}</td>
+                  <td>{new Date(
+                    temp.end_date
+                    ).toLocaleDateString()}</td>
                   <td>
                     <button
                       style={{
