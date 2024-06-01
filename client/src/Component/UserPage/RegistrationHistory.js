@@ -21,7 +21,6 @@ function Registrationhistory() {
   }, []);
 
   const fetchCours = async (id) => {
-    console.log("user id for profile", id);
     try {
       const response = await getRegisteredCourse(id);
       if (response.status === 200) {

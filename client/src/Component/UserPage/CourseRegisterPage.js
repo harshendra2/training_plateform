@@ -53,8 +53,7 @@ function CourseRegisterPage() {
     try {
       const response = await enrollCourse(id, enrollmentData);
       if (response.status === 200) {
-        toast.success("Registration successful!");
-        // Optionally, reset form fields here
+        toast.success(response.message);
         setName("");
         setSession("");
         setSelectedCourse("");
@@ -63,7 +62,7 @@ function CourseRegisterPage() {
 
         navigate("/user/profile");
       } else {
-        toast.error("Registration failed!");
+        toast.error(response.response.data.msg);
       }
     } catch (error) {
       toast.error("An error occurred during registration.");
@@ -81,7 +80,6 @@ function CourseRegisterPage() {
               type="text"
               value={name}
               onChange={(e) => setName(e.target.value)}
-              required
               className="form-input"
             />
           </div>
@@ -91,7 +89,6 @@ function CourseRegisterPage() {
               type="number"
               value={session}
               onChange={(e) => setSession(e.target.value)}
-              required
               className="form-input"
             />
           </div>
@@ -101,7 +98,6 @@ function CourseRegisterPage() {
               <select
                 value={selectedCourse}
                 onChange={(e) => setSelectedCourse(e.target.value)}
-                required
                 className="course-select"
                 style={{ width: "300px", height: "40px" }}
               >
@@ -122,7 +118,6 @@ function CourseRegisterPage() {
               type="text"
               value={semester}
               onChange={(e) => setSemester(e.target.value)}
-              required
               className="form-input"
             />
           </div>
@@ -132,7 +127,6 @@ function CourseRegisterPage() {
               type="tel"
               value={phone}
               onChange={(e) => setPhone(e.target.value)}
-              required
               className="form-input"
             />
           </div>

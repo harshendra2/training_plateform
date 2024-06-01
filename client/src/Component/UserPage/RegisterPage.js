@@ -26,7 +26,7 @@ function UserRegister() {
           toast.success("Signup Successfully");
           navigate("/user/login");
         } else {
-          toast.error("Please Check your Email and password");
+          toast.error(response.response.data.msg);
         }
       } catch (error) {
         toast.error(error.response);

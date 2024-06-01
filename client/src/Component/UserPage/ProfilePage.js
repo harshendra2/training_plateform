@@ -17,8 +17,9 @@ function Profile() {
   const [id, SetId] = useState("");
 
   const fetchProfile = async (id) => {
+    let tokens = localStorage.getItem("usertoken");
     try {
-      const response = await getUserProfile(id);
+      const response = await getUserProfile(id,tokens);
       if (response.status === 200) {
         setProfile(response.data.data);
       }

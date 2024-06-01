@@ -1,8 +1,7 @@
 import axios from "axios";
-let tokens = localStorage.getItem("usertoken");
 
 
-export const commonrequest = async (methods, url, body, token, header) => {
+export const commonrequest = async (methods, url, body, tokens, header) => {
   
   let config = {
     method: methods,
